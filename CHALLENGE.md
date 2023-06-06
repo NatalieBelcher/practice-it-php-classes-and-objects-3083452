@@ -2,6 +2,10 @@
 
 1. Create a set of classes for a fictional messaging app.
 2. Determine if you should use instance, static, or constant data for each class.
+instance = belong to an object
+static = belong to a class
+const = unchangeable data defined in a class
+
 
 ## Program Logic
 
