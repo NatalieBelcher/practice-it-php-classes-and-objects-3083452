@@ -13,3 +13,14 @@ $admin->addWorkspaceMember($memberB, $workspace);
 
 // creating a chat using the Chat class
 // $chat = $memberA->createChat('general', $workspace);
+
+$channel = $admin->createChannel('channel name', $workspace);
+$admin->postMessageToChat('Hello!', $channel);
+
+$dm = $memberA->createDirectMessage([$memberB], $workspace);
+$memberB->postMessageToChat('Hello again!', $dm);
+
+echonl($channel->getMessages());
+echonl($dm->getMessages($memberB));
+echonl($dm->getMessages($memberA));
+echonl($dm->getMessages($admin));
